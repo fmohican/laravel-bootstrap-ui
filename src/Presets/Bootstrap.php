@@ -13,36 +13,22 @@ class Bootstrap extends Preset
      */
     public static function install()
     {
-        static::updatePackages();
-        static::updateViteConfiguration();
+        static::updateWebpackConfiguration();
         static::updateSass();
         static::updateBootstrapping();
         static::removeNodeModules();
     }
 
     /**
-     * Update the given package array.
-     *
-     * @param  array  $packages
-     * @return array
-     */
-    protected static function updatePackageArray(array $packages)
-    {
-        return [
-            'bootstrap' => '^5.2.3',
-            '@popperjs/core' => '^2.11.6',
-            'sass' => '^1.56.1',
-        ] + $packages;
-    }
-
-    /**
-     * Update the Vite configuration.
+     * Update the Webpack configuration.
      *
      * @return void
      */
-    protected static function updateViteConfiguration()
+    protected static function updateWebpackConfiguration()
     {
-        copy(__DIR__.'/bootstrap-stubs/vite.config.js', base_path('vite.config.js'));
+        copy(__DIR__.'/bootstrap-stubs/webpack.mix.js', base_path('webpack.mix.js'));
+        copy(__DIR__.'/bootstrap-stubs/package.json', base_path('package.json'));
+        unlink(base_path('vite.config.js'));
     }
 
     /**

@@ -1,16 +1,20 @@
 {
-    "name": "laravel/ui",
-    "description": "Laravel UI utilities and presets.",
-    "keywords": ["laravel", "ui"],
+    "name": "fmohican/laravel-bootstrap-ui",
+    "description": "Laravel UI utilities and presets, based on webpack",
+    "keywords": ["laravel", "ui", "webpack"],
     "license": "MIT",
     "authors": [
         {
             "name": "Taylor Otwell",
             "email": "taylor@laravel.com"
+        },
+        {
+            "name": "Fmohican",
+            "email": "florinmohican@protonmail.com"
         }
     ],
     "require": {
-        "php": "^8.0",
+        "php": "^8.1",
         "illuminate/console": "^9.21|^10.0",
         "illuminate/filesystem": "^9.21|^10.0",
         "illuminate/support": "^9.21|^10.0",

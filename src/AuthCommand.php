@@ -133,6 +133,11 @@ class AuthCommand extends Command
             __DIR__.'/../stubs/migrations/2014_10_12_100000_create_password_resets_table.php',
             base_path('database/migrations/2014_10_12_100000_create_password_resets_table.php')
         );
+
+        copy(
+            __DIR__ . '/../stubs/Providers/BladeServiceProvider.stub',
+            base_path('app/Providers/BladeServiceProvider.php')
+        );
     }
 
     /**
